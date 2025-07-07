@@ -6,6 +6,7 @@ from runner import run_with_server
 load_dotenv()
 
 def http_server():
+    # Add necessary authentication using headers or query params
     return MCPServerStreamableHttp(
         name="Vincent MCP Server (http)",
         params={"url": os.getenv("MCP_HTTP_SERVER_URL")},

@@ -12,10 +12,10 @@ def stdio_server():
             "command": "npx",
             "args": ["-y", "node", os.getenv("MCP_STDIO_SERVER_PATH")],
             "env": {
-                "PUBKEY_ROUTER_DATIL_CONTRACT": os.getenv("PUBKEY_ROUTER_DATIL_CONTRACT"),
-                "VINCENT_DATIL_CONTRACT": os.getenv("VINCENT_DATIL_CONTRACT"),
                 "VINCENT_DELEGATEE_PRIVATE_KEY": os.getenv("VINCENT_DELEGATEE_PRIVATE_KEY"),
                 "VINCENT_APP_JSON_DEFINITION": os.getenv("VINCENT_APP_JSON_DEFINITION"),
+                # Or pass the Vincent App Id if not overriding anything
+                # "VINCENT_APP_ID": os.getenv("VINCENT_APP_ID"),
             },
         },
     )
